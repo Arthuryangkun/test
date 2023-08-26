@@ -90,3 +90,11 @@ json.dump(train_set, open('./try300/train_tasks.json', 'w'))
 json.dump(test_set, open('./try300/test_tasks.json', 'w'))
 json.dump(dev_set, open('./try300/dev_tasks.json', 'w'))
 
+def bubblesort(alist):
+    for passnum in range(len(alist)-1,0,-1):
+        for i in range(passnum):
+            if alist[i]>alist[i+1]:
+                temp = alist[i]
+                alist[i] = alist[i+1]
+                alist[i+1] = temp
+    return alist
